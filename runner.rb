@@ -9,8 +9,10 @@ trivia_data = {
 
 deck = Deck_of_cards::Deck.new(trivia_data)
 
+# p deck.multiple_choice_answers
+
 while deck.remaining_cards > 0
-  card = deck.draw_card # card is an instance of the Card class
+  card = deck.draw_card 
   puts card.question
   user_answer = gets.chomp
   if user_answer.downcase == card.answer.downcase
